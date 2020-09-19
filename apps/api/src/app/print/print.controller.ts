@@ -15,7 +15,7 @@ export class PrintController {
     const stream = new Readable();
     stream.push(buffer);
     stream.push(null);
-    res.set({'Content-Length': buffer.length, 'Content-Disposition' : `attachment; filename=${req.header}.pdf`});
+    res.set({'Content-Length': buffer.length, 'Content-Disposition' : `attachment; filename=${req.filename}.pdf`});
     stream.pipe(res);
   }
 }
