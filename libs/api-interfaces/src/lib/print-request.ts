@@ -7,5 +7,11 @@ export class PrintRequest {
 
     @ApiProperty({description: 'Generated filename'})
     filename: string;
+    
+    @ApiProperty({description: 'Text to put on the header of each page'})
+    header: string;
+
+    @ApiProperty({description: 'Optional text to put on the footer of each page'})
+    footer?: string;
 
 }
