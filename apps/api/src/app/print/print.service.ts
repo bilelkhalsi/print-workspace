@@ -11,7 +11,7 @@ export class PrintService {
         Logger.log(`New print request : ${req.url}`);
         const headerTemplate = pageHeaderTemplate(req.header);
         const footerTemplate = pageFooterTemplate(req.footer);
-        const browser = await puppeteer.launch({ headless: true });
+        const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
         const page = await browser.newPage();
         await page.goto(req.url, { waitUntil: 'networkidle2' });
         await page.emulateMediaType('print');
