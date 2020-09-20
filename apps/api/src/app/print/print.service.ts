@@ -13,7 +13,7 @@ export class PrintService {
         const footerTemplate = pageFooterTemplate(req.footer);
         const browser = await puppeteer.launch({ headless: true });
         const page = await browser.newPage();
-        await page.goto(req.url, { waitUntil: 'networkidle0' });
+        await page.goto(req.url, { waitUntil: 'networkidle2' });
         await page.emulateMediaType('print');
         const pdf = await page.pdf({
             format: 'A4',

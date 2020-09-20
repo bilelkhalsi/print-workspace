@@ -1,13 +1,7 @@
-<div style="text-align: center;">
-  <img
-    width="450"
-    src="http://inoco.fr/wp-content/uploads/2018/07/cropped-logo-inoco-v7-1.png"
-  />
+<div class="graph-container">
+  <print-workspace-graph [options]="graph"></print-workspace-graph>
 </div>
-<div class="d-flex flex-column align-items-center justify-content-center">
-  <h1>Welcome to print service !</h1>
-  <h4>
-    <a href="http://localhost:3333/api/swagger/">Swagger : http://localhost:3333/api/swagger/</a> <br>
-    <a href="https://github.com/bilelkhalsi/print-workspace">Github : https://github.com/bilelkhalsi/print-workspace</a>
-  </h4>
+<div class="table-container">
+  <h1>Vitamin content of f ruit and vegetables</h1>
+  <print-workspace-table [data]="tableData" [columns]="tableColumns"></print-workspace-table>
 </div>
